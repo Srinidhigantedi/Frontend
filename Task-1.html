@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
+body{background:#0b1220;color:#fff;}
+a{text-decoration:none;color:white;}
+
+nav{
+    height:70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 50px;
+    background-color: #01050c;
+}
+.nav-list a{margin:0 15px;color:#cbd5e1;}
+.nav-btn{
+    background:#3b82f6;
+    padding:8px 18px;
+    border-radius:8px;
+}
+
+/* HERO */
+.part1{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:60px 80px;
+}
+
+.box1{flex:1;}
+.box1 h6{color:#3b82f6;letter-spacing:2px;}
+.box1 h1{font-size:55px;margin:10px 0;}
+.box1 h3{color:#3b82f6;margin-bottom:15px;}
+.box1 p{color:#cbd5e1;line-height:1.6;margin-bottom:20px;}
+
+.btn{
+    padding:10px 20px;
+    border-radius:8px;
+    display:inline-block;
+    margin-right:10px;
+}
+.primary{background:#3b82f6;}
+.outline{border:1px solid #3b82f6;}
+
+/* ICONS FIXED */
+.icon{
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+}
+.icon i{
+    width:40px;
+    height:40px;
+    background:#1f2937;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:8px;
+    color:#fff;
+}
+
+/* IMAGE FIX */
+.box2{flex:1;display:flex;justify-content:center;}
+.box2 img{
+    width:500px;
+    height:100%;
+    box-shadow:0 0 40px rgba(59,130,246,0.6);
+}
+
+/* ABOUT */
+.part2{
+    background:#f1f5f9;
+    color:black;
+    padding:60px 80px;
+    display:flex;
+    gap:50px;
+}
+.p2-box1{
+    flex:1;
+    padding: 40px;
+}
+.p2-box2{
+    flex:1;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:40px;
+}
+
+/* SKILL CARD FIX */
+.card{
+  display:flex;
+  gap:15px;
+  align-items:center;
+  background:#fff;
+  padding:40px;
+  border-radius:12px;
+}
+
+.icon2{
+  background:#099bef;
+  padding:10px;
+  border-radius:8px;
+}
+
+/* PROJECTS */
+.part3{padding:60px 80px}
+.projects{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+}
+
+.project{
+    background:#f3f3f5;
+    border-radius:12px;
+    overflow:hidden;
+    color:black
+}
+.project img{width:100%;height: 50%}
+.project p{padding:15px;}
+
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+.tags span {
+  background: #bfc7cf;
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-right: 10px;
+  margin-left:7px;
+  color:rgb(5, 105, 152)
+
+}
+
+.arrow {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background:#bfc7cf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color:rgb(5, 105, 152)
+
+
+}
+
+/* TESTIMONIALS */
+/* TESTIMONIAL FIX */
+.part4{
+    padding:60px 80px;
+}
+
+.part4 h6{
+    color:#3b82f6;
+    text-transform:uppercase;
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.part4 h1{
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+/* container */
+.testimonial{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+/* card */
+.testimonial-card{
+    background:rgba(4, 1, 52, 0.845);
+    padding:25px;
+    border-radius:15px;
+}
+
+/* quote */
+.quote{
+    font-size:66px;
+    color:#3b82f6;
+}
+
+/* text */
+.testimonial-text{
+    font-size:14px;
+    line-height:1.6;
+    margin:15px 0;
+    color:#cbd5e1;
+    align-items: center;
+    justify-content: center;
+}
+
+/* user section */
+.user{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:20px;
+}
+
+.user-info{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.user-info img{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+}
+
+.name{
+    font-size:14px;
+    font-weight:bold;
+}
+
+.role{
+    font-size:12px;
+    color:#9ca3af;
+}
+/* CONTACT */
+.contact{
+    display:flex;
+    padding:80px 60px;
+    gap:60px;
+}
+
+.contact form input, .contact textarea{
+    width:100%;
+    margin:10px 0;
+    padding:10px;
+    border-radius:10px;
+    border:none;
+}
+
+footer{
+    text-align:left;
+    padding:20px;
+    color:#94a3b8;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<h2>AK.</h2>
+<div class="nav-list">
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Skills</a>
+<a href="#">Projects</a>
+<a href="#">Contact</a>
+</div>
+<div class="nav-btn">Download CV</div>
+</nav>
+
+<!-- HERO -->
+<section class="part1">
+<div class="box1">
+<h6>HELLO I'M</h6>
+<h1>Alex Kumar</h1>
+<h3>Full Stack Developer</h3>
+
+<p>
+I build exceptional and accessible digital experiences
+for the web. Passionate about clean code, innovative
+solutions, and bringing ideas to life.
+</p>
+
+<div class="btn primary">View My Work</div>
+<div class="btn outline">Contact Me</div>
+
+<div class="icon">
+<i class="fa-brands fa-github"></i>
+<i class="fa-brands fa-twitter"></i>
+<i class="fa-brands fa-linkedin"></i>
+<i class="fa-regular fa-envelope"></i>
+</div>
+
+</div>
+
+<div class="box2">
+<img src="../image/profile.png" alt="">
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="part2">
+<div class="p2-box1">
+<h5 style="color: #3b82f6;">ABOUT ME</h5>
+<br>
+<h1>Crafting Digital Experiences</h1>
+<br>
+<p>
+I'm a passionate Full Stack Developer with 3+ years of
+experience building web applications that make an 
+impact.I love turning complex problems into simple, 
+beautiful, and intiuitive solutions.</p>
+<br>
+
+<p>
+When I'm not coding, you'll find me exploring new
+technologies, contributing to open source, or sharing
+knowledge with the developer community.
+</p>
+<br>
+<br>
+<div class="p2-box2">
+<div class="card">
+<div class="icon2"><i class="fa-solid fa-calendar-check"></i></div>
+<div>
+<h3>25+</h3>
+<p>Projects Completed</p>
+</div>
+</div>
+<div class="card">
+<div class="icon2"><i class="fa-solid fa-face-smile"></i></div>
+<div>
+<h3>15+</h3>
+<p>Happy Clients</p>  
+</div>
+</div>
+</div>
+
+</div>
+
+ 
+
+<div class="p2-box2">
+
+<div class="card">
+<div class="icon2"><i class="fa-solid fa-display"></i></div>
+<div>
+<h3>Frontend</h3>
+<p>HTML, CSS, JavaScript</p>
+</div>
+</div>
+
+<div class="card">
+<div class="icon2"><i class="fa-solid fa-server"></i></div>
+<div>
+<h3>Backend</h3>
+<p>Node, Express</p>
+</div>
+</div>
+
+<div class="card">
+<div class="icon2"><i class="fa-solid fa-wrench"></i></div>
+<div>
+<h3>Tools</h3>
+<p>Git, Docker</p>
+</div>
+</div>
+
+<div class="card">
+<div class="icon2"><i class="fa-solid fa-star"></i></div>
+<div>
+<h3>Others</h3>
+<p>API, SEO</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section class="part3" style="background-color: #021026;">
+<h5 style="color: #3b82f6;">FEATURED PROJECTS</h5>
+<br>
+<h1>My Recent Works</h1>
+<br>
+
+<div class="projects">
+
+<div class="project">
+<img src="../image/analytic dashboard.png">
+<p><b>Analytics Dashboard</b></p>
+<p>A comprehensive dashboard for data visualization
+and analytics with real-time updates.</p>
+<div class="card-footer">
+      <div class="tags">
+        <span><b>React</b></span>
+        <span><b>Chart.js</b></span>
+        <span><b>Tailwind CSS</b></span>
+      </div>
+
+      <div class="arrow">
+                         →
+      </div>
+    </div>
+</div>
+
+<div class="project">
+<img src="../image/e commerce.png">
+<p><b>E-Commerce</b></p>
+<p>A full-featured online store with cart, payments,
+and admin panel.</p>
+<div class="card-footer">
+    <div class="tags">
+        <span><b>Next.js</b></span>
+        <span><b>MongoDB</b></span>
+        <span><b>Stripe</b></span>
+      </div>
+
+      <div class="arrow">
+                         →
+      </div>
+      
+    </div>
+</div>
+
+<div class="project">
+<img src="../image/task manager.png">
+<p><b>Task Manager</b></p>
+<p>A collaborative task management tool with real-time
+updates and team features.</p>
+<div class="card-footer">
+      <div class="tags">
+        <span><b>React</b></span>
+        <span><b>node.js</b></span>
+        <span><b>socket.io</b></span>
+      </div>
+
+      <div class="arrow">
+                         →
+      </div>
+    </div>
+</div>
+
+</div>
+</section>
+
+<!-- TESTIMONIAL -->
+<!-- TESTIMONIAL -->
+<section class="part4" style="background-color:#3d454f;">
+<h5 style="color: #3b82f6;">WHAT CLIENTS SAY</h5>
+<h1>Testimonials</h1>
+
+<div class="testimonial">
+
+    <!-- Card 1 -->
+    <div class="testimonial-card">
+        <div class="quote">“</div>
+        <div class="testimonial-text">
+            Alex delivered beyond expectations with strong attention to detail and technical expertise.
+        </div>
+
+        <div class="user">
+            <div class="user-info">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg">
+                <div>
+                    <div class="name">Sarah Johnson</div>
+                    <div class="role">CEO, TechStart</div>
+                </div>
+            </div>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="testimonial-card">
+        <div class="quote">“</div>
+        <div class="testimonial-text">
+            Working with Alex was a game-changer for our project. He's professional, reliable, and delivers high-quality code.
+        </div>
+
+        <div class="user">
+            <div class="user-info">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg">
+                <div>
+                    <div class="name">Mike Chen</div>
+                    <div class="role">CTO, DataFlow</div>
+                </div>
+            </div>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="testimonial-card">
+        <div class="quote">“</div>
+        <div class="testimonial-text">
+            Alex transformed our idea into a beautiful, functional web application. Highly recommended!
+        </div>
+
+        <div class="user">
+            <div class="user-info">
+                <img src="https://randomuser.me/api/portraits/women/65.jpg">
+                <div>
+                    <div class="name">Emma Davis</div>
+                    <div class="role">Product Manager, WebApp</div>
+                </div>
+            </div>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+        </div>
+    </div>
+
+</div>
+</section>
+<!-- CONTACT -->
+<section class="contact">
+<div style="width: 60%;">    
+<h5 style="color: #3b82f6;">GET IN TOUCH</h5>
+<br>
+<h1>Let's Work Together</h1>
+<br>
+<p>Have a project in mind? I'd love to hear about it.</p>
+<p>Let's create something amazing together.</p>
+<br>
+<br>
+<p>📧 hello@alexkumar.dev</p>
+<br>
+<p>📞 +01 (555) 123-4567</p>
+<br>
+<p>📍 San Francisco, CA</p>
+</div>
+<div style="width:60%;">
+<form style="background-color: #011838;">
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<input type="text" placeholder="Subject">
+<textarea placeholder="Your Message"></textarea>
+<center><button class="btn primary"> ☑ Send Message</button></center>
+</form>
+</div>
+</section>
+
+
+<footer>
+    
+<nav style="background-color: #022556;">
+<div>
+<h4>AK.</h4>
+<P>Buidling digital experiences that make a difference</P></div>
+
+<div class="nav-list">
+<h4>Quick Links</h4>
+
+<a href="#">About</a>
+<a href="#">Skills</a>
+<a href="#">Projects</a>
+<a href="#">Contact</a>
+</div>
+<div>
+<h4>Connect</h4>
+<i class="fa-brands fa-github"></i>
+<i class="fa-brands fa-twitter"></i>
+<i class="fa-brands fa-linkedin"></i>
+<i class="fa-regular fa-envelope"></i>
+</div>
+</nav>
+<center><div align-items="space around">© 2024 Alex Kumar. All rights reserved.</div></center>
+
+</footer>
+
+</body>
+</html>
